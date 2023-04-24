@@ -23,26 +23,26 @@ WEBHOOK = bool(environ.get("WEBHOOK", True)) # for web support on/off
 SESSION = environ.get('SESSION', 'Media_search')
 API_ID = int(environ('API_ID', '11597005'))
 API_HASH = environ('API_HASH', 'de0766044e869ce11468a155d1054f0a')
-BOT_TOKEN = environ('BOT_TOKEN', '')
+BOT_TOKEN = environ('BOT_TOKEN', '6153932029:AAH8Kvm-MmK1auuD5OSDr3KKA8bA4_XsLpA')
 
 # Bot settings
 CACHE_TIME = int(environ.get('CACHE_TIME', 300))
 USE_CAPTION_FILTER = bool(environ.get('USE_CAPTION_FILTER', 'False'))
-PICS = (environ.get('PICS' ,'https://graph.org/file/01ddfcb1e8203879a63d7.jpg https://graph.org/file/d69995d9846fd4ad632b8.jpg https://graph.org/file/a125497b6b85a1d774394.jpg https://graph.org/file/43d26c54d37f4afb830f7.jpg https://graph.org/file/60c1adffc7cc2015f771c.jpg https://graph.org/file/d7b520240b00b7f083a24.jpg https://graph.org/file/0f336b0402db3f2a20037.jpg https://graph.org/file/39cc4e15cad4519d8e932.jpg https://graph.org/file/d59a1108b1ed1c6c6c144.jpg https://te.legra.ph/file/3a4a79f8d5955e64cbb8e.jpg https://graph.org/file/d69995d9846fd4ad632b8.jpg')).split()
+PICS = (environ.get('PICS', 'https://telegra.ph/file/f4d6a71692a1e4a101dbe.jpg')).split()
 BOT_START_TIME = time()
 
 # Admins, Channels & Users
-ADMINS = (int(admin) if id_pattern.search(admin) else admin for admin in environ.get('ADMINS', '').split())
-CHANNELS = (int(ch) if id_pattern.search(ch) else ch for ch in environ.get('CHANNELS', '0').split())
+ADMINS = (int(admin) if id_pattern.search(admin) else admin for admin in environ.get('ADMINS', '871214529').split())
+CHANNELS = (int(ch) if id_pattern.search(ch) else ch for ch in environ.get('CHANNELS', '-1001588566233').split())
 auth_users = (int(user) if id_pattern.search(user) else user for user in environ.get('AUTH_USERS', '').split())
 AUTH_USERS = (auth_users + ADMINS) if auth_users else []
-auth_channel = environ.get('AUTH_CHANNEL')
+auth_channel = environ.get('AUTH_CHANNEL', '-1001583286822')
 auth_grp = environ.get('AUTH_GROUP')
 AUTH_CHANNEL = int(auth_channel) if auth_channel and id_pattern.search(auth_channel) else None
 AUTH_GROUPS = (int(ch) for ch in auth_grp.split()) if auth_grp else None
 
 # MongoDB information
-DATABASE_URI = environ.get('DATABASE_URI', "")
+DATABASE_URI = environ.get('DATABASE_URI', "mongodb+srv://henil1:henil1@cluster0.5xvor.mongodb.net/myFirstDatabase?retryWrites=true&w=majority")
 DATABASE_NAME = environ.get('DATABASE_NAME', "Cluster0")
 COLLECTION_NAME = environ.get('COLLECTION_NAME', 'Telegram_files')
 
@@ -64,8 +64,8 @@ SHORT_API = environ.get("SHORT_API")
 
 # Others
 IMDB_DELET_TIME = int(environ.get('IMDB_DELET_TIME', "300"))
-LOG_CHANNEL = int(environ.get('LOG_CHANNEL', 0))
-SUPPORT_CHAT = environ.get('SUPPORT_CHAT', 'mkn_bots_updates')
+LOG_CHANNEL = int(environ.get('LOG_CHANNEL', '-1001635108127'))
+SUPPORT_CHAT = environ.get('SUPPORT_CHAT', 'Movies4u_teambot')
 P_TTI_SHOW_OFF = is_enabled((environ.get('P_TTI_SHOW_OFF', "True")), True)
 PM_IMDB = environ.get('PM_IMDB', "True")
 IMDB = is_enabled((environ.get('IMDB', "True")), True)
